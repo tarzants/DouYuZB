@@ -19,6 +19,7 @@
 		22C8E0E422A4E2DC00F24DE3 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C8E0E222A4E2DC00F24DE3 /* Live.storyboard */; };
 		22C8E0E722A4E30A00F24DE3 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C8E0E522A4E30A00F24DE3 /* Follow.storyboard */; };
 		22C8E0EA22A4E32E00F24DE3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C8E0E822A4E32E00F24DE3 /* Profile.storyboard */; };
+		22C8E0ED22A5006100F24DE3 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C8E0EC22A5006100F24DE3 /* UIBarButtonItem-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		22C8E0E322A4E2DC00F24DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Live.storyboard; sourceTree = SOURCE_ROOT; };
 		22C8E0E622A4E30A00F24DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
 		22C8E0E922A4E32E00F24DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
+		22C8E0EC22A5006100F24DE3 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		22C8E0B222A109EF00F24DE3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				22C8E0EB22A5001000F24DE3 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -245,6 +248,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		22C8E0EB22A5001000F24DE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				22C8E0EC22A5006100F24DE3 /* UIBarButtonItem-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +395,7 @@
 			files = (
 				2284C8F822A0D97300B0D14E /* AppDelegate.swift in Sources */,
 				22C8E0D122A2699100F24DE3 /* MainViewController.swift in Sources */,
+				22C8E0ED22A5006100F24DE3 /* UIBarButtonItem-Extension.swift in Sources */,
 				22C8E0D422A26A1400F24DE3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
