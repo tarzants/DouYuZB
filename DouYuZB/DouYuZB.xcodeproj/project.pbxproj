@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2242556322AE45DA004DC4C3 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242556222AE45DA004DC4C3 /* PageTitleView.swift */; };
+		2242556522AE4A07004DC4C3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242556422AE4A07004DC4C3 /* Common.swift */; };
 		2284C8F822A0D97300B0D14E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284C8F722A0D97300B0D14E /* AppDelegate.swift */; };
 		2284C8FF22A0D97400B0D14E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2284C8FE22A0D97400B0D14E /* Assets.xcassets */; };
 		2284C90222A0D97400B0D14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2284C90022A0D97400B0D14E /* LaunchScreen.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2242556222AE45DA004DC4C3 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		2242556422AE4A07004DC4C3 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		2284C8F422A0D97300B0D14E /* DouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2284C8F722A0D97300B0D14E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2284C8FE22A0D97400B0D14E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				22C8E0EB22A5001000F24DE3 /* Extension */,
+				2242556422AE4A07004DC4C3 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 		22C8E0D022A2699100F24DE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2242556222AE45DA004DC4C3 /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,7 +401,9 @@
 			files = (
 				2284C8F822A0D97300B0D14E /* AppDelegate.swift in Sources */,
 				22C8E0D122A2699100F24DE3 /* MainViewController.swift in Sources */,
+				2242556322AE45DA004DC4C3 /* PageTitleView.swift in Sources */,
 				22C8E0ED22A5006100F24DE3 /* UIBarButtonItem-Extension.swift in Sources */,
+				2242556522AE4A07004DC4C3 /* Common.swift in Sources */,
 				22C8E0D422A26A1400F24DE3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T9LLJKSM4;
 				INFOPLIST_FILE = DouYuZB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -619,7 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T9LLJKSM4;
 				INFOPLIST_FILE = DouYuZB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

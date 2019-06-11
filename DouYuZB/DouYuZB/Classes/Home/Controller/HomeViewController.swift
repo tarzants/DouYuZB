@@ -8,8 +8,17 @@
 
 import UIKit
 
+private let kTitleViewH : CGFloat = 60
 class HomeViewController: UIViewController {
 
+    private lazy var pageTitleView : PageTitleView = {
+        let titleFrame = CGRect(x: 0, y: kStatusBarH+kNavgationBarH, width: kScreenW, height: kTitleViewH)
+        let titles =  ["推荐","游戏","娱乐","趣玩"]
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        //titleView.backgroundColor = UIColor.purple
+        return titleView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +32,14 @@ class HomeViewController: UIViewController {
 //设置UI界面
 extension HomeViewController {
     private func setupUI() {
+        //不需要调整scrollview的内边距
+        //automaticallyAdjustsScrollViewInsets = false
+        //UIScrollView.ContentInsetAdjustmentBehavior = false
+        
+        //设置导航栏P
         setupNavigationBar()
+        //添加titleView
+        view.addSubview(pageTitleView)
     }
     private func setupNavigationBar() {
         //设置左侧button
@@ -35,7 +51,7 @@ extension HomeViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
         
         //设置右侧button
-        let size = CGSize(width: 30, height: 35)
+        let size = CGSize(width: 28, height: 35)
 
         //构造函数方法
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highimageName: "Image_scan_click", size: size)
