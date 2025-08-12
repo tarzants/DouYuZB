@@ -1,0 +1,47 @@
+name: iOS Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s "/Applications/Xcode.app/Contents/Developer"
+          xcodebuild -version
+          xcode-select -p
+
+      - name: Build (Simulator)
+        working-directory: DouYuZB
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project DouYuZB.xcodeproj \
+            -target DouYuZB \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+        env:
+          NSUnbufferedIO: "YES"
+
+      - name: Archive Artifacts (DerivedData logs if any)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcode-logs
+          path: |
+            ~/Library/Logs/DiagnosticReports/*.crash
+            ~/Library/Logs/DiagnosticReports/*.log
+            ~/Library/Logs/DiagnosticReports/*.spin
+          if-no-files-found: ignore
